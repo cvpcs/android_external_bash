@@ -151,7 +151,7 @@
 
 /* Define DEBUGGER if you want to compile in some features used only by the 
    bash debugger. */
-#define DEBUGGER 1
+/* #undef DEBUGGER */
 
 /* Define STRICT_POSIX if you want bash to be strictly posix.2 conformant by
    default (except for echo; that is controlled separately). */
