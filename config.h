@@ -74,7 +74,7 @@
 
 /* Define HELP_BUILTIN if you want the `help' shell builtin and the long
    documentation strings compiled into the shell. */
-#define HELP_BUILTIN 1
+/* #undef HELP_BUILTIN */
 
 /* Define RESTRICTED_SHELL if you want the generated shell to have the
    ability to be a restricted one.  The shell thus generated can become
