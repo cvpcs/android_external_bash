@@ -1970,7 +1970,7 @@ rl_username_completion_function (text, state)
 
       username = savestring (&text[first_char_loc]);
       namelen = strlen (username);
-      setpwent ();
+//      setpwent ();
     }
 
 #if defined (HAVE_GETPWENT)

@@ -2102,9 +2102,9 @@ bash_groupname_completion_function (text, state)
      const char *text;
      int state;
 {
-#if defined (__WIN32__) || defined (__OPENNT) || !defined (HAVE_GRP_H)
+//#if defined (__WIN32__) || defined (__OPENNT) || !defined (HAVE_GRP_H)
   return ((char *)NULL);
-#else
+/*#else
   static char *gname = (char *)NULL;
   static struct group *grent;
   static int gnamelen;
@@ -2133,7 +2133,7 @@ bash_groupname_completion_function (text, state)
 
   value = savestring (grent->gr_name);
   return (value);
-#endif
+#endif*/
 }
 
 /* Functions to perform history and alias expansions on the current line. */
@@ -3421,7 +3421,7 @@ static int
 putx(c)
      int c;
 {
-  putc (c, rl_outstream);
+  return putc (c, rl_outstream);
 }
   
 static int
