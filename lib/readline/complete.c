@@ -1953,7 +1953,7 @@ rl_username_completion_function (text, state)
      const char *text;
      int state;
 {
-#if defined (__WIN32__) || defined (__OPENNT)
+#if defined (__BIONIC__) || (__WIN32__) || defined (__OPENNT)
   return (char *)NULL;
 #else /* !__WIN32__ && !__OPENNT) */
   static char *username = (char *)NULL;
@@ -1970,7 +1970,7 @@ rl_username_completion_function (text, state)
 
       username = savestring (&text[first_char_loc]);
       namelen = strlen (username);
-//      setpwent ();
+      setpwent ();
     }
 
 #if defined (HAVE_GETPWENT)
