@@ -418,7 +418,7 @@ initialize_shell_variables (env, privmode)
   set_auto_export (temp_var);	/* XXX */
 #endif
 
-  temp_var = set_if_not ("TERM", "dumb");
+  temp_var = set_if_not ("TERM", "unknown");
 #if 0
   set_auto_export (temp_var);	/* XXX */
 #endif

@@ -553,10 +553,23 @@ get_working_directory (for_whom)
 
   if (the_current_working_directory == 0)
     {
-#if defined (GETCWD_BROKEN)
-      the_current_working_directory = getcwd (0, PATH_MAX);
+#if defined (__BIONIC__)
+      /**
+       * This is a really lame work around to try to stop bash from flipping
+       * out if PWD isn't defined when starting it up on bionic
+       */
+      char *d = (char *)malloc(sizeof(char) * PATH_MAX);
+      the_current_working_directory = getcwd (d, sizeof(d));
+      if (the_current_working_directory)
+        the_current_working_directory = d;
+      else
+        FREE (d);
 #else
+# if defined (GETCWD_BROKEN)
+      the_current_working_directory = getcwd (0, PATH_MAX);
+# else
       the_current_working_directory = getcwd (0, 0);
+# endif
 #endif
       if (the_current_working_directory == 0)
 	{
