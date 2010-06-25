@@ -179,7 +179,7 @@ extern void clock_t_to_secs ();
 extern void print_clock_t ();
 
 /* Declarations for functions defined in lib/sh/fdprintf.c */
-extern void fdprintf __P((int, const char *, ...))  __attribute__((__format__ (printf, 2, 3)));
+extern int fdprintf __P((int, const char *, ...))  __attribute__((__format__ (printf, 2, 3)));
 
 /* Declarations for functions defined in lib/sh/fmtulong.c */
 #define FL_PREFIX     0x01    /* add 0x, 0X, or 0 prefix as appropriate */
