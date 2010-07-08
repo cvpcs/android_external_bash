@@ -13,8 +13,7 @@ LOCAL_SRC_FILES:= \
 	strtrans.c snprintf.c mailstat.c fmtulong.c \
 	fmtullong.c fmtumax.c zcatfd.c zmapfd.c winsize.c wcsdup.c \
 	fpurge.c zgetline.c mbscmp.c uconvert.c ufuncs.c casemod.c \
-	fdprintf.c input_avail.c mbscasecmp.c fnxform.c fdprintf.c \
-	mbschr.c
+	fdprintf.c input_avail.c mbscasecmp.c fnxform.c mbschr.c
 
 LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/../.. \
