@@ -25,6 +25,8 @@ LOCAL_CFLAGS += \
 
 LOCAL_MODULE := libhistory
 
+LOCAL_MODULE_TAGS := eng
+
 include $(BUILD_STATIC_LIBRARY)
 
 # ========================================================
@@ -75,6 +77,8 @@ LOCAL_CFLAGS += \
 	-DHAVE_CONFIG_H
 
 LOCAL_MODULE := libreadline
+
+LOCAL_MODULE_TAGS := eng
 
 include $(BUILD_STATIC_LIBRARY)
 

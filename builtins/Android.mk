@@ -65,6 +65,7 @@ LOCAL_CFLAGS += \
 	-DCONF_OSTYPE=\"android-eabi\" \
 	-DCONF_MACHTYPE=\"arm-android-eabi\" \
 	-DCONF_VENDOR=\"unknown\"
+LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := libbuiltins
 include $(BUILD_STATIC_LIBRARY)
 
